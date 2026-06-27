@@ -17,13 +17,6 @@ body{
     width: 100%;
 }
 
-/*==========================
-   NAVBAR
-==========================*/
-
-/* ==========================
-   HERO SECTION
-========================== */
 
 /* ================= HOME SECTION ================= */
 
@@ -43,7 +36,7 @@ body{
 
 .hero h1{
 
-    font-size:4rem;
+    //font-size:2rem;
     font-weight:800;
     text-shadow:2px 2px 10px rgba(0,0,0,.6);
 
@@ -78,6 +71,14 @@ body{
 
 @media(max-width:768px){
 
+    .hero{
+
+        background-attachment:scroll;
+
+        padding:20px;
+
+    }
+
     .hero h1{
 
         font-size:2.5rem;
@@ -90,38 +91,22 @@ body{
 
     }
 
-}
-
-/* Responsive */
-
-@media(max-width:768px){
-
-    .hero{
-
-        background-attachment:scroll;
-
-        padding:20px;
-
-    }
-
-    .hero h1{
-
-        font-size:40px;
-
-    }
-
-    .hero p{
-
-        font-size:18px;
-
-    }
-
     .hero .btn{
 
         font-size:18px;
 
         padding:12px 30px;
 
+    }
+
+    section h2{
+        font-size:32px;
+    }
+
+    .gallery-img,
+    .card img{
+        height:220px;
+        border: 1px solid black;
     }
 
 }
@@ -196,22 +181,6 @@ body{
     background-position:center;
 }
 
-.hero-logo{
-    width:180px;
-    margin-bottom:25px;
-    animation:float 3s ease-in-out infinite;
-}
-
-.hero h1{
-    font-size:70px;
-    font-weight:800;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:22px;
-    margin-bottom:30px;
-}
 
 .hero .btn{
     padding:14px 40px;
@@ -303,8 +272,9 @@ section h2{
 }
 
 .gallery-img:hover{
-    transform:scale(1.08);
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transform:scale(1.1);
+    //filter: grayscale(100%);
+    //box-shadow:0 10px 25px rgba(0,0,0,.3);
 }
 
 /*==========================
@@ -439,7 +409,7 @@ footer{
  RESPONSIVE
 ==========================*/
 
-@media(max-width:991px){
+/*@media(max-width:991px){
 
     .navbar-brand span{
         font-size:22px;
@@ -455,7 +425,7 @@ footer{
 
     .hero-logo{
         width:140px;
-    }
+    }*/
 
     .navbar-nav{
         margin-top:20px;
@@ -468,24 +438,3 @@ footer{
 
 }
 
-@media(max-width:768px){
-
-    .hero{
-        padding:20px;
-    }
-
-    .hero h1{
-        font-size:20px;
-    }
-
-    section h2{
-        font-size:32px;
-    }
-
-    .gallery-img,
-    .card img{
-        height:220px;
-        border: 1px solid black;
-    }
-
-}
