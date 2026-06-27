@@ -99,6 +99,11 @@ body{
 
     }
 
+    .navbar-brand span {
+        font-size: 1.2rem !important;
+    }
+
+  
     section h2{
         font-size:32px;
     }
@@ -409,7 +414,7 @@ footer{
  RESPONSIVE
 ==========================*/
 
-/*@media(max-width:991px){
+@media(max-width:991px){
 
     .navbar-brand span{
         font-size:22px;
@@ -425,7 +430,7 @@ footer{
 
     .hero-logo{
         width:140px;
-    }*/
+    }
 
     .navbar-nav{
         margin-top:20px;
