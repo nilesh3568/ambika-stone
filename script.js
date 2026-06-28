@@ -175,3 +175,13 @@ form.addEventListener("submit", function () {
         form.reset();
     }, 1000);
 });
+
+
+
+
+
+
+
+
+// ================= Loader =================
+
