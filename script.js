@@ -160,3 +160,18 @@ buttons.forEach(button => {
 window.addEventListener("load", () => {
     console.log("Ambika Crusher Website Loaded Successfully.");
 });
+
+
+
+
+
+
+
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function () {
+    setTimeout(() => {
+        form.reset();
+    }, 1000);
+});
