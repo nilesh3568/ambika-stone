@@ -344,6 +344,7 @@ section h2{
 
 .card{
     border:none;
+    height: auto;
     overflow:hidden;
     border-radius:15px;
     transition:.4s;
@@ -351,9 +352,10 @@ section h2{
 }
 
 .card img{
-    height:250px;
+    height:200px;
     object-fit:cover;
     transition:.5s;
+    border: none;
 }
 
 .card:hover img{
@@ -371,6 +373,7 @@ section h2{
 .card-body h4{
     font-weight:700;
     margin-bottom:15px;
+    margin-top: 20px;
 }
 
 .card-body p{
@@ -558,3 +561,403 @@ footer{
 
 }
 
+
+
+
+/* ================= LOADER ================= */
+
+
+/* ================= SERVICES ================= */
+
+#services{
+    background:#f8f9fa;
+}
+
+#services .card{
+    border-radius:15px;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+#services .card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+#services i{
+    transition:.4s;
+}
+
+#services .card:hover i{
+    transform:rotate(360deg);
+}
+
+#services h4{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+#services p{
+    color:#666;
+    line-height:1.7;
+}
+
+
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#0b0b0b;
+    color:#fff;
+    padding:80px 0 25px;
+    position:relative;
+    overflow:hidden;
+    text-align:center;   /* Center all content */
+}
+
+/* Top Golden Line */
+
+.footer-top{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background:linear-gradient(90deg,#ffc107,#ff9800,#ffc107);
+    box-shadow:0 0 15px #ffc107;
+}
+
+/* Company Title */
+
+.footer-title{
+    color:#ffc107;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+/* Footer Text */
+
+.footer p{
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+/* Headings */
+
+.footer h4{
+    color:#fff;
+    display:inline-block;
+    position:relative;
+    margin-bottom:30px;
+}
+
+/* Underline */
+
+.footer h4::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-8px;
+    width:45px;
+    height:3px;
+    background:#ffc107;
+    border-radius:10px;
+    transition:.4s;
+}
+
+.footer h4:hover::after{
+    width:100%;
+}
+
+/* Lists */
+
+.footer-links{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-links li{
+    margin:12px 0;
+    color:#ccc;
+}
+
+.footer-links a{
+    color:#ccc;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#ffc107;
+}
+
+/* Icons */
+
+.footer p i,
+.footer-links li i{
+    color:#ffc107;
+    margin-right:8px;
+}
+
+/* Social Icons */
+
+.social-icons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.social-icons a{
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#1b1b1b;
+    border:2px solid #333;
+    border-radius:50%;
+    text-decoration:none;
+    transition:.35s;
+}
+
+.social-icons a i{
+    color:#fff;
+    font-size:18px;
+}
+
+.social-icons a:hover{
+    background:#ffc107;
+    border-color:#ffc107;
+    box-shadow:0 0 10px #ffc107,
+               0 0 20px #ffc107,
+               0 0 35px rgba(255,193,7,.8);
+}
+
+.social-icons a:hover i{
+    color:#111;
+}
+
+/* WhatsApp Button */
+
+.footer-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 28px;
+    background:#ffc107;
+    color:#111;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.footer-btn i{
+    color:#25D366 !important;
+    margin-right:8px;
+}
+
+.footer-btn:hover{
+    background:#fff;
+    color:#111;
+    box-shadow:0 0 15px rgba(255,255,255,.3);
+}
+
+/* Divider */
+
+.footer hr{
+    border-color:#333;
+    margin:50px 0 25px;
+}
+
+/* Bottom */
+
+.copyright,
+.developer{
+    color:#aaa;
+    text-align:center;
+}
+
+.copyright strong,
+.developer strong{
+    color:#ffc107;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .footer{
+        text-align:center;
+    }
+
+    .footer h4::after{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+}
+
+
+
+
+/*=========================
+      CUSTOMER REVIEWS
+=========================*/
+
+#reviews{
+    background:#f8f9fa;
+    padding:80px 0;
+}
+
+#reviews h2{
+    font-size:2.5rem;
+    font-weight:700;
+    color:#222;
+}
+
+#reviews .text-muted{
+    font-size:16px;
+    color:#777 !important;
+}
+
+/* Review Card */
+
+.testimonial-box{
+    background:#fff;
+    border-radius:18px;
+    padding:30px 25px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-top:4px solid #ffc107;
+    transition:.35s;
+    height:100%;
+}
+
+.testimonial-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* Customer Image */
+
+.testimonial-box img{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #ffc107;
+    margin-bottom:15px;
+}
+
+/* Customer Name */
+
+.testimonial-box h4{
+    margin-bottom:5px;
+    font-size:20px;
+    font-weight:700;
+    color:#222;
+}
+
+/* Profession */
+
+.testimonial-box span{
+    display:block;
+    color:#777;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+/* Stars */
+
+.stars{
+    color:#ffc107;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.stars i{
+    margin:0 2px;
+}
+
+/* Review Text */
+
+.testimonial-box p{
+    color:#555;
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:0;
+}
+
+/* Carousel Buttons */
+
+.carousel-control-prev,
+.carousel-control-next{
+    width:50px;
+    height:50px;
+    background:#ffc107;
+    border-radius:50%;
+    top:50%;
+    transform:translateY(-50%);
+    opacity:1;
+}
+
+.carousel-control-prev{
+    left:-30px;
+}
+
+.carousel-control-next{
+    right:-30px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    filter:invert(1);
+}
+
+/* Indicators */
+
+.carousel-indicators{
+    bottom:-55px;
+}
+
+.carousel-indicators [data-bs-target]{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#ffc107;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    #reviews{
+        padding:60px 0;
+    }
+
+    #reviews h2{
+        font-size:2rem;
+    }
+
+    .testimonial-box{
+        padding:25px 20px;
+    }
+
+    .testimonial-box img{
+        width:65px;
+        height:65px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next{
+        display:none;
+    }
+
+                                }
