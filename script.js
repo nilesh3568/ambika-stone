@@ -178,10 +178,44 @@ form.addEventListener("submit", function () {
 
 
 
+// ================= BACK TO TOP =================
 
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 300) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+
+});
+
+backToTop.addEventListener("click", function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
 
 
 
 
 // ================= Loader =================
 
+// ================= LOADER =================
+
+window.addEventListener("load", function(){
+
+    const loader = document.getElementById("loader");
+
+    setTimeout(function(){
+
+        loader.classList.add("hide");
+
+    }, 1200);
+
+});
