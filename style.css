@@ -143,6 +143,12 @@ body{
 }
 
 
+iframe{
+    border-radius: 10px;
+    //border: 1px solid #ffc107;
+}
+
+
 
 /* Responsive */
 
@@ -446,7 +452,7 @@ textarea{
 .contact-form{
     background-color: transparent;
     padding: 25px;
-    border: 1px solid white;
+    border: 1px solid #ffc107;
     border-radius: 10px;
 }
 
