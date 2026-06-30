@@ -206,7 +206,7 @@ backToTop.addEventListener("click", function () {
 
 // ================= Loader =================
 
-// ================= LOADER =================
+
 
 window.addEventListener("load", function(){
 
@@ -217,5 +217,211 @@ window.addEventListener("load", function(){
         loader.classList.add("hide");
 
     }, 1200);
+
+});
+
+
+
+// ================= COUNTER =================
+
+const counters = document.querySelectorAll(".counter");
+
+const startCounter = (counter) => {
+
+    const target = +counter.getAttribute("data-target");
+
+    let count = 0;
+
+    const speed = target / 150;
+
+    const update = () => {
+
+        count += speed;
+
+        if (count < target) {
+
+            counter.innerText = Math.ceil(count);
+
+            requestAnimationFrame(update);
+
+        } else {
+
+            counter.innerText = target + "+";
+
+        }
+
+    };
+
+    update();
+
+};
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            startCounter(entry.target);
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, { threshold: 0.5 });
+
+counters.forEach(counter => observer.observe(counter));
+
+
+
+
+
+//================ LIGHTBOX GALLERY ================
+
+const images = document.querySelectorAll(".gallery-img");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightbox-img");
+
+const closeBtn = document.querySelector(".close");
+
+const prevBtn = document.querySelector(".prev");
+
+const nextBtn = document.querySelector(".next");
+
+let current = 0;
+
+// Open Image
+
+images.forEach((img,index)=>{
+
+    img.addEventListener("click",()=>{
+
+        current=index;
+
+        showImage();
+
+        lightbox.style.display="flex";
+
+        document.body.style.overflow="hidden";
+
+    });
+
+});
+
+// Show Image
+
+function showImage(){
+
+    lightboxImg.src=images[current].src;
+
+}
+
+// Next Image
+
+nextBtn.addEventListener("click",(e)=>{
+
+    e.stopPropagation();
+
+    current++;
+
+    if(current>=images.length){
+
+        current=0;
+
+    }
+
+    showImage();
+
+});
+
+// Previous Image
+
+prevBtn.addEventListener("click",(e)=>{
+
+    e.stopPropagation();
+
+    current--;
+
+    if(current<0){
+
+        current=images.length-1;
+
+    }
+
+    showImage();
+
+});
+
+// Close
+
+closeBtn.addEventListener("click",()=>{
+
+    lightbox.style.display="none";
+
+    document.body.style.overflow="auto";
+
+});
+
+// Click Outside
+
+lightbox.addEventListener("click",(e)=>{
+
+    if(e.target===lightbox){
+
+        lightbox.style.display="none";
+
+        document.body.style.overflow="auto";
+
+    }
+
+});
+
+// Keyboard
+
+document.addEventListener("keydown",(e)=>{
+
+    if(lightbox.style.display==="flex"){
+
+        if(e.key==="Escape"){
+
+            lightbox.style.display="none";
+
+            document.body.style.overflow="auto";
+
+        }
+
+        if(e.key==="ArrowRight"){
+
+            current++;
+
+            if(current>=images.length){
+
+                current=0;
+
+            }
+
+            showImage();
+
+        }
+
+        if(e.key==="ArrowLeft"){
+
+            current--;
+
+            if(current<0){
+
+                current=images.length-1;
+
+            }
+
+            showImage();
+
+        }
+
+    }
 
 });
