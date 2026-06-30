@@ -219,6 +219,7 @@ iframe{
 
     .contact .email{
     white-space: nowrap;
+    text-decoration: none !important;
 }
 
   
@@ -1512,6 +1513,10 @@ textarea{
 
     text-decoration:underline;
 
+}
+
+.email{
+    text-decoration: none !important;
 }
 
 .email:hover{
